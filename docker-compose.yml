@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  ai-code-review:
+    build: .
+    container_name: ai_code_review
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=sk-xxx  # Enter your openai key
+    restart: unless-stopped
